@@ -1,13 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Autowalk : MonoBehaviour {
+public class WalkCamino2 : MonoBehaviour {
 	
 	private CardboardHead head;
 	private Vector3 startingPosition;
 	private float delay = 0.0f; 
-
-	public MoveCamino1 boolBoy;
+	
+	public bool camino2Flag = false;
+	
+	void MoveFunction(){
+		GameObject g = GameObject.FindGameObjectWithTag ("Player");
+		iTween.MoveTo(g, iTween.Hash("path", iTweenPath.GetPath("Camino2"), "easetype", iTween.EaseType.easeInOutSine, "time", 5));
+	}
 	
 	void Start() {
 		head = Camera.main.GetComponent<StereoController>().Head;
@@ -19,10 +24,10 @@ public class Autowalk : MonoBehaviour {
 		bool isLookedAt = GetComponent<Collider>().Raycast(head.Gaze, out hit, Mathf.Infinity);
 		// if looking at object for 2 seconds, enable/disable autowalk
 		if (isLookedAt && Time.time>delay) { 
-			GameObject g = GameObject.FindGameObjectWithTag ("Player");
-			boolBoy = g.GetComponent<MoveCamino1> ();
-			// accesses the bool named "isOnFire" and changed it's value.
-			boolBoy.camino1Flag= !boolBoy.camino1Flag;
+			if(camino2Flag = true)
+			{
+				MoveFunction();
+			}
 			delay = Time.time + 1.0f;
 		}
 		// currently looking at object
@@ -31,7 +36,7 @@ public class Autowalk : MonoBehaviour {
 		} 
 		// not looking at object
 		else if (!isLookedAt) { 
-			GetComponent<Renderer>().material.color = Color.red; 
+			GetComponent<Renderer>().material.color = Color.green; 
 			delay = Time.time + 1.0f; 
 		}
 	}
