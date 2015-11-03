@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//Sciprt del destino # 3
+
+using UnityEngine;
 using System.Collections;
 
 public class WalkCamino3 : MonoBehaviour {
@@ -11,7 +13,7 @@ public class WalkCamino3 : MonoBehaviour {
 	
 	void MoveFunction(){
 		GameObject g = GameObject.FindGameObjectWithTag ("Player");
-		iTween.MoveTo(g, iTween.Hash("path", iTweenPath.GetPath("Camino3"), "easetype", iTween.EaseType.easeInOutSine, "time", 5));
+		iTween.MoveTo(g, iTween.Hash("path", iTweenPath.GetPath("Camino3"), "easetype", iTween.EaseType.easeOutSine, "time", 5));
 	}
 	
 	void Start() {
@@ -28,7 +30,7 @@ public class WalkCamino3 : MonoBehaviour {
 			{
 				MoveFunction();
 			}
-			delay = Time.time + 1.0f;
+			delay = Time.time + 2.0f;
 		}
 		// currently looking at object
 		else if (isLookedAt) { 
@@ -37,7 +39,7 @@ public class WalkCamino3 : MonoBehaviour {
 		// not looking at object
 		else if (!isLookedAt) { 
 			GetComponent<Renderer>().material.color = Color.green; 
-			delay = Time.time + 1.0f; 
+			delay = Time.time + 2.0f; 
 		}
 	}
 	

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//Script que regresa al usuario al punto inicial
+
+using UnityEngine;
 using System.Collections;
 
 public class Reset : MonoBehaviour {
@@ -19,7 +21,7 @@ public class Reset : MonoBehaviour {
 		// if looking at object for 2 seconds, enable/disable autowalk
 		if (isLookedAt && Time.time>delay) { 
 			GameObject g = GameObject.FindGameObjectWithTag("Player");
-			g.transform.position = new Vector3(0, 0, 0);
+			g.transform.position = new Vector3(0, 1, 0);
 			delay = Time.time + 1.0f;
 		}
 		// currently looking at object
