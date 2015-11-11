@@ -8,12 +8,13 @@ public class WalkCamino3 : MonoBehaviour {
 	private CardboardHead head;
 	private Vector3 startingPosition;
 	private float delay = 0.0f; 
+	public int traveltime = 10;
 	
 	public bool camino3Flag = false;
 	
 	void MoveFunction(){
 		GameObject g = GameObject.FindGameObjectWithTag ("Player");
-		iTween.MoveTo(g, iTween.Hash("path", iTweenPath.GetPath("Camino3"), "easetype", iTween.EaseType.easeOutSine, "time", 5));
+		iTween.MoveTo(g, iTween.Hash("path", iTweenPath.GetPath("Camino3"), "easetype", iTween.EaseType.easeOutSine, "time", traveltime));
 	}
 	
 	void Start() {
@@ -38,7 +39,7 @@ public class WalkCamino3 : MonoBehaviour {
 		} 
 		// not looking at object
 		else if (!isLookedAt) { 
-			GetComponent<Renderer>().material.color = Color.green; 
+			GetComponent<Renderer>().material.color = Color.white; 
 			delay = Time.time + 2.0f; 
 		}
 	}

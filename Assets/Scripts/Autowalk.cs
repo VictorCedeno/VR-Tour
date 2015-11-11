@@ -35,7 +35,7 @@ public class Autowalk : MonoBehaviour {
 		} 
 		// not looking at object
 		else if (!isLookedAt) { 
-			GetComponent<Renderer>().material.color = Color.green; 
+			GetComponent<Renderer>().material.color = Color.white; 
 			delay = Time.time + 1.5f; 
 		}
 	}
