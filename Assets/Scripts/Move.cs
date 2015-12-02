@@ -4,8 +4,8 @@ using System.Collections;
 public class Move : MonoBehaviour {
 
 	public bool moveFlag = false;
-	public int movespeed = 5;
-	
+	public int movespeed = 10;
+
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +22,30 @@ public class Move : MonoBehaviour {
 			g.transform.Translate (Camera.main.transform.forward * movespeed * Time.deltaTime);
 		}
 
-		// ...
+	//	if (Input.touchCount == 1) {
+	//		moveFlag = !moveFlag;	
+	//}
+		if (Input.GetKeyDown ("space")) {
+			moveFlag = !moveFlag;
+		}
+
 	}
+
+	void OnEnable(){
+		Cardboard.SDK.OnTrigger += TriggerPulled;
+	}
+	
+	void OnDisable(){
+		Cardboard.SDK.OnTrigger -= TriggerPulled;
+	}
+	
+	void TriggerPulled() {
+		moveFlag = !moveFlag;	
+	}
+
+
+
+
 }
+
+
