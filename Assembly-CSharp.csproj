@@ -45,28 +45,24 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Cardboard\DemoScene\ChangeScene.cs" />
-     <Compile Include="Assets\Cardboard\DemoScene\FPS.cs" />
-     <Compile Include="Assets\Cardboard\DemoScene\Feedback.cs" />
-     <Compile Include="Assets\Cardboard\DemoScene\Teleport.cs" />
-     <Compile Include="Assets\Cardboard\Legacy\DemoScene\TeleportLegacyUI.cs" />
-     <Compile Include="Assets\Cardboard\Legacy\Scripts\CardboardOnGUI.cs" />
-     <Compile Include="Assets\Cardboard\Legacy\Scripts\CardboardOnGUIMouse.cs" />
-     <Compile Include="Assets\Cardboard\Legacy\Scripts\CardboardOnGUIWindow.cs" />
-     <Compile Include="Assets\Cardboard\Legacy\Scripts\SkyboxMesh.cs" />
-     <Compile Include="Assets\Cardboard\Legacy\Scripts\StereoLensFlare.cs" />
-     <Compile Include="Assets\Cardboard\PhotosphereScenes\Course\OnBackPressed.cs" />
+     <Compile Include="Assets\Cardboard\Scripts\Autowalk.cs" />
      <Compile Include="Assets\Cardboard\Scripts\Cardboard.cs" />
      <Compile Include="Assets\Cardboard\Scripts\CardboardEye.cs" />
      <Compile Include="Assets\Cardboard\Scripts\CardboardHead.cs" />
      <Compile Include="Assets\Cardboard\Scripts\CardboardPostRender.cs" />
      <Compile Include="Assets\Cardboard\Scripts\CardboardPreRender.cs" />
      <Compile Include="Assets\Cardboard\Scripts\CardboardProfile.cs" />
+     <Compile Include="Assets\Cardboard\Scripts\ChangeMode.cs" />
+     <Compile Include="Assets\Cardboard\Scripts\ChangeScene.cs" />
+     <Compile Include="Assets\Cardboard\Scripts\FPS.cs" />
+     <Compile Include="Assets\Cardboard\Scripts\Feedback.cs" />
      <Compile Include="Assets\Cardboard\Scripts\GazeInputModule.cs" />
+     <Compile Include="Assets\Cardboard\Scripts\MainScene.cs" />
      <Compile Include="Assets\Cardboard\Scripts\Pose3D.cs" />
      <Compile Include="Assets\Cardboard\Scripts\RadialUndistortionEffect.cs" />
      <Compile Include="Assets\Cardboard\Scripts\StereoController.cs" />
      <Compile Include="Assets\Cardboard\Scripts\StereoRenderEffect.cs" />
+     <Compile Include="Assets\Cardboard\Scripts\Teleport.cs" />
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\BaseAndroidDevice.cs" />
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\BaseCardboardDevice.cs" />
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\BaseVRDevice.cs" />
@@ -78,14 +74,12 @@
      <Compile Include="Assets\Pixelplacement\iTweenPath\PathScripts\WalkCamino3.cs" />
      <Compile Include="Assets\Pixelplacement\iTweenPath\PathScripts\WalkCamino4.cs" />
      <Compile Include="Assets\Pixelplacement\iTweenPath\iTweenPath.cs" />
-     <Compile Include="Assets\Scripts\Autowalk.cs" />
      <Compile Include="Assets\Scripts\Move.cs" />
      <Compile Include="Assets\Scripts\Reset.cs" />
      <None Include="Assets\Cardboard\Resources\SkyboxMesh.shader" />
      <None Include="Assets\Cardboard\Distortion\CardboardDistortion.cginc" />
      <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\Cardboard\Resources\UnlitTexture.shader" />
-     <None Include="Assets\Cardboard\Legacy\Resources\GUIScreen.shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
@@ -94,7 +88,6 @@
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
      <None Include="Assets\Cardboard\Resources\SolidColor.shader" />
-     <None Include="Assets\Cardboard\PhotosphereScenes\Course\CustomShader.shader" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
