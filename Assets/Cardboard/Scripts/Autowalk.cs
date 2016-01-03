@@ -23,7 +23,7 @@ public class Autowalk : MonoBehaviour {
 		}
 		if (isLookedAt && Time.time>delay) { 
 			GameObject g = GameObject.FindGameObjectWithTag ("Player");
-			boolBoy = g.GetComponent<Move> ();
+			boolBoy = g.GetComponent<Move>();
 			delay = Time.time + 1.5f;
 		}
 	}
