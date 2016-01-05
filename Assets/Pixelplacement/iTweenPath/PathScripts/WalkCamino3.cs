@@ -36,6 +36,7 @@ public class WalkCamino3 : MonoBehaviour {
 		// currently looking at object
 		else if (isLookedAt) { 
 			GetComponent<Renderer>().material.color = Color.yellow; 
+			head.BroadcastMessage("looking");
 		} 
 		// not looking at object
 		else if (!isLookedAt) { 
