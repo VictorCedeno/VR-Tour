@@ -6,9 +6,13 @@ public class Autowalk : MonoBehaviour {
 	private CardboardHead head;
 	private float delay;
 	private Move boolBoy;
+	private bool moveFlag;
+	public int moveSpeed;
 	
 	void Start() {
 		delay = 0.0f;
+		moveSpeed = 30;
+		moveFlag = false;
 		head = Camera.main.GetComponent<StereoController>().Head;
 	}
 	
@@ -22,11 +26,28 @@ public class Autowalk : MonoBehaviour {
 			delay = Time.time + 1.5f;
 		}
 		if (isLookedAt && Time.time>delay) { 
-			GameObject g = GameObject.FindGameObjectWithTag ("Player");
-			boolBoy = g.GetComponent<Move>();
+			TriggerPulled();
 			delay = Time.time + 1.5f;
+		}
+		if (moveFlag) { 
+			GameObject g = GameObject.FindGameObjectWithTag ("Player");
+			g.transform.Translate (Camera.main.transform.forward * moveSpeed * Time.deltaTime);
+		}
+		if (Input.GetKeyDown ("space")) {
+			moveFlag = !moveFlag;
 		}
 	}
 
+	void OnEnable(){
+		Cardboard.SDK.OnTrigger += TriggerPulled;
+	}
+	
+	void OnDisable(){
+		Cardboard.SDK.OnTrigger -= TriggerPulled;
+	}
+	
+	void TriggerPulled() {
+		moveFlag = !moveFlag;	
+	}
 
 }

@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../Babahoyo VR/Assets/Cardboard/Scripts/Toolbox.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Cardboard/Scripts/Autowalk.cs">
     <Files>
-      <File FileName="../Babahoyo VR/Assets/Cardboard/Scripts/Toolbox.cs" Line="8" Column="17" />
+      <File FileName="Assets/Cardboard/Scripts/Autowalk.cs" Line="27" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
