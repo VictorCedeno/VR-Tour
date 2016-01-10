@@ -105,3 +105,29 @@ Cmd: compileSnippet
   api=5 type=1 insize=12600 outsize=6 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF pd=UNITY_NO_DXT5nm UNITY_NO_RGBM UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
 Cmd: compileSnippet
   api=5 type=1 insize=12600 outsize=6 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF PIXELSNAP_ON HDR_LIGHT_PREPASS_OFF pd=UNITY_NO_DXT5nm UNITY_NO_RGBM UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
+Cmd: preprocess
+  insize=999 outsize=372 ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=926 outsize=492 kw= pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=926 outsize=6 kw= pd= ok=1
+Cmd: compileSnippet
+  api=5 type=0 insize=926 outsize=712 kw= pd=UNITY_NO_DXT5nm UNITY_NO_RGBM UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
+Cmd: compileSnippet
+  api=5 type=1 insize=926 outsize=6 kw= pd=UNITY_NO_DXT5nm UNITY_NO_RGBM UNITY_NO_SCREENSPACE_SHADOWS UNITY_NO_LINEAR_COLORSPACE ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=1172 outsize=690 kw= pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=1172 outsize=6 kw= pd= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=7338 outsize=2904 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=7338 outsize=6 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=4149 outsize=1558 kw=DIRECTIONAL pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=4149 outsize=6 kw=DIRECTIONAL pd= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=966 outsize=600 kw= pd= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=966 outsize=6 kw= pd= ok=1
