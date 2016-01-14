@@ -14,7 +14,7 @@ public class WalkCamino1 : MonoBehaviour {
 
 	void MoveFunction(){
 		GameObject g = GameObject.FindGameObjectWithTag ("Player");
-		iTween.MoveTo(g, iTween.Hash("path", iTweenPath.GetPath("Camino1"), "easetype", iTween.EaseType.easeOutSine, "time", traveltime));
+		iTween.MoveTo(g, iTween.Hash("path", iTweenPath.GetPath("Camino1"), "easetype", iTween.EaseType.linear, "time", traveltime));
 	}
 	
 	void Start() {
