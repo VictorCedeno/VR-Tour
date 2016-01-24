@@ -10,7 +10,7 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Collider))]
+
 public class Feedback : MonoBehaviour {
 	
 	private CardboardHead head;
@@ -22,32 +22,36 @@ public class Feedback : MonoBehaviour {
 		head = Camera.main.GetComponent<StereoController>().Head;
 	}
 	
-	void Update()
-	{
+	void Update() {
 		if (transform.localScale.y - 0.00015f < lastScale) {
 			reset();
 		}
 		lastScale = transform.localScale.y;
 	}
 
-	public void looking() 
-	{
-		scaleY(0.0002f);
+	/**
+	 * 
+	 */
+	public void looking() {
+		scaleY(0.05f);
 	}
 
-	public void reset() 
-	{
+	/**
+	 * 
+	 */
+	public void reset() {
 		Vector3 scale = transform.localScale;
 		scale.y = 0.0f;
 		transform.localScale = scale;
 	}
-	
-	public void scaleY(float f) 
-	{
+
+	/**
+	 * 
+	 */
+	public void scaleY(float f) {
 		Vector3 scale = transform.localScale;
 		scale.y = transform.localScale.y + f;
 		transform.localScale = scale;
 	}
-
-
+	
 }

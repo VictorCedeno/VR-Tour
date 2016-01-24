@@ -20,9 +20,8 @@ public class Autowalk : MonoBehaviour {
 		RaycastHit hit;
 		bool isLookedAt = GetComponent<Collider>().Raycast(head.Gaze, out hit, Mathf.Infinity);
 		if (isLookedAt) {
-			GetComponent<Renderer>().material.color = Color.yellow;
+			head.BroadcastMessage("looking");
 		} else {
-			GetComponent<Renderer> ().material.color = Color.red; 
 			delay = Time.time + 1.5f;
 		}
 		if (isLookedAt && Time.time>delay) { 

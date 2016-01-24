@@ -16,6 +16,8 @@ public class Auditorium : MonoBehaviour {
 		bool isLookedAt = GetComponent<Collider>().Raycast(head.Gaze, out hit, Mathf.Infinity);
 		if (!isLookedAt) {
 			delay = Time.time + 1.5f;
+		} else {
+			head.BroadcastMessage("looking");
 		}
 		if (isLookedAt && Time.time>delay) { 
 			Application.LoadLevel(0);
