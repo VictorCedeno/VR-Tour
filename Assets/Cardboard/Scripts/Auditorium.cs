@@ -20,7 +20,7 @@ public class Auditorium : MonoBehaviour {
 			head.BroadcastMessage("looking");
 		}
 		if (isLookedAt && Time.time>delay) { 
-			Application.LoadLevel(0);
+			Application.LoadLevel(Constants.AUDITORIUM_SCENE);
 			delay = Time.time + 1.5f;
 		}
 	}

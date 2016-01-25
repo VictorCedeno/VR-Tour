@@ -56,6 +56,9 @@
      <Compile Include="Assets\Cardboard\Scripts\CardboardProfile.cs" />
      <Compile Include="Assets\Cardboard\Scripts\ChangeMode.cs" />
      <Compile Include="Assets\Cardboard\Scripts\ChangeScene.cs" />
+     <Compile Include="Assets\Cardboard\Scripts\Classroom.cs" />
+     <Compile Include="Assets\Cardboard\Scripts\ClassroomPhotoSphere.cs" />
+     <Compile Include="Assets\Cardboard\Scripts\Constants.cs" />
      <Compile Include="Assets\Cardboard\Scripts\FPS.cs" />
      <Compile Include="Assets\Cardboard\Scripts\Feedback.cs" />
      <Compile Include="Assets\Cardboard\Scripts\GazeInputModule.cs" />
@@ -91,11 +94,17 @@
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
      <None Include="Assets\Cardboard\Resources\SolidColor.shader" />
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

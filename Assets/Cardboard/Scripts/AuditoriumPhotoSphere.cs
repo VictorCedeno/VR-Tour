@@ -20,7 +20,7 @@ public class AuditoriumPhotoSphere : MonoBehaviour {
 			head.BroadcastMessage("looking");
 		}
 		if (isLookedAt && Time.time>delay) { 
-			Application.LoadLevel(1);
+			Application.LoadLevel(Constants.AUDITORIUM_PHOTOSPHERE_SCENE);
 			delay = Time.time + 1.5f;
 		}
 	}

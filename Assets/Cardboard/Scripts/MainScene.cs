@@ -20,7 +20,7 @@ public class MainScene : MonoBehaviour {
 			delay = Time.time + 1.5f;
 		}
 		if (isLookedAt && Time.time>delay) { 
-			Application.LoadLevel(0);
+			Application.LoadLevel(Constants.MAIN_SCENE);
 			delay = Time.time + 1.5f;
 		}
 	}
