@@ -9,32 +9,31 @@ public class Reset : MonoBehaviour {
 	private Vector3 startingPosition;
 	private float delay = 0.0f; 
 
-	
+	/**
+	 * 
+	 */
 	void Start() {
 		head = Camera.main.GetComponent<StereoController>().Head;
 		startingPosition = transform.localPosition;
 	}
-	
+
+	/**
+	 * 
+	 */
 	void Update() {
 		RaycastHit hit;
 		bool isLookedAt = GetComponent<Collider>().Raycast(head.Gaze, out hit, Mathf.Infinity);
-		// if looking at object for 2 seconds, enable/disable autowalk
+		if (!isLookedAt) {
+			delay = Time.time + 1.5f;
+		} else {
+			head.BroadcastMessage("looking");
+		}
 		if (isLookedAt && Time.time>delay) { 
+			Application.LoadLevel(Constants.MAIN_SCENE);
 			GameObject g = GameObject.FindGameObjectWithTag("Player");
 			g.transform.position = new Vector3(0, 1, 0);
 			delay = Time.time + 1.0f;
-			Application.LoadLevel(Constants.AUDITORIUM_SCENE);
 		}
-		// currently looking at object
-		else if (isLookedAt) { 
-			GetComponent<Renderer>().material.color = Color.yellow;
-		} 
-		// not looking at object
-		else if (!isLookedAt) { 
-			GetComponent<Renderer>().material.color = Color.red; 
-			delay = Time.time + 1.0f; 
-		}
-		transform.Rotate(Vector3.up, 10 * Time.deltaTime);
 	}
 	
 }
