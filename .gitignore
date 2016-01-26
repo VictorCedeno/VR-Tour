@@ -6,11 +6,13 @@ Obj/
 UnityGenerated/
 Library/
 Assets/AssetStoreTools*
+.apk
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
 ExportedObj/
+obj/
 *.svd
 *.userprefs
 *.csproj
