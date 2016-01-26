@@ -9,10 +9,15 @@
 // ------------------------------------------------------------------------------
 public static class Constants {
 
-	public const int MAIN_SCENE = 0;
-	public const int AUDITORIUM_SCENE = 1;
-	public const int AUDITORIUM_PHOTOSPHERE_SCENE = 2;
-	public const int CLASSROOM_SCENE = 3;
-	public const int CLASSROOM_PHOTOSPHERE_SCENE = 4;
-	
+	public const int INTRO_SCENE = 0;
+	public const int MAIN_SCENE = 1;
+	public const int AUDITORIUM_SCENE = 2;
+	public const int AUDITORIUM_PHOTOSPHERE_SCENE = 3;
+	public const int CLASSROOM_SCENE = 4;
+	public const int CLASSROOM_PHOTOSPHERE_SCENE = 5;
+
+
+	public const int STANDARD_MODE = 0;
+	public const int VR_MODE = 1;
+
 }

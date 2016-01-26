@@ -23,6 +23,7 @@ public class Reset : MonoBehaviour {
 			GameObject g = GameObject.FindGameObjectWithTag("Player");
 			g.transform.position = new Vector3(0, 1, 0);
 			delay = Time.time + 1.0f;
+			Application.LoadLevel(Constants.AUDITORIUM_SCENE);
 		}
 		// currently looking at object
 		else if (isLookedAt) { 
