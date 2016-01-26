@@ -1,7 +1,8 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Pixelplacement\iTweenPath\PathScripts\WalkCamino1.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Move.cs">
     <Files>
+      <File FileName="Assets\Scripts\Move.cs" Line="9" Column="2" />
       <File FileName="Assets\Pixelplacement\iTweenPath\PathScripts\WalkCamino1.cs" Line="12" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
