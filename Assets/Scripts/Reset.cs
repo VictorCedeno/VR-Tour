@@ -20,8 +20,7 @@ public class Reset : MonoBehaviour {
 		bool isLookedAt = GetComponent<Collider>().Raycast(head.Gaze, out hit, Mathf.Infinity);
 		// if looking at object for 2 seconds, enable/disable autowalk
 		if (isLookedAt && Time.time>delay) { 
-			GameObject g = GameObject.FindGameObjectWithTag("Player");
-			g.transform.position = new Vector3(0, 1, 0);
+			Application.LoadLevel (Constants.MAIN_SCENE);
 			delay = Time.time + 1.0f;
 		}
 		// currently looking at object
@@ -34,7 +33,7 @@ public class Reset : MonoBehaviour {
 			GetComponent<Renderer>().material.color = Color.red; 
 			delay = Time.time + 1.0f; 
 		}
-		transform.Rotate(Vector3.up, 10 * Time.deltaTime);
+
 	}
 	
 }

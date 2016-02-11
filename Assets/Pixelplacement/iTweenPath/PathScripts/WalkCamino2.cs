@@ -1,4 +1,4 @@
-﻿//Sciprt del destino # 2
+﻿//Sciprt del destino # 1
 
 using UnityEngine;
 using System.Collections;
@@ -7,14 +7,14 @@ public class WalkCamino2 : MonoBehaviour {
 	
 	private CardboardHead head;
 	private Vector3 startingPosition;
-	private float delay = 0.0f; 
+	private float delay = 0.0f;  
 	public int traveltime = 10;
 	
 	public bool camino2Flag = false;
 	
 	void MoveFunction(){
 		GameObject g = GameObject.FindGameObjectWithTag ("Player");
-		iTween.MoveTo(g, iTween.Hash("path", iTweenPath.GetPath("Camino2"), "easetype", iTween.EaseType.easeOutSine, "time", traveltime));
+		iTween.MoveTo(g, iTween.Hash("path", iTweenPath.GetPath("camino2"), "easetype", iTween.EaseType.linear, "time", traveltime));
 	}
 	
 	void Start() {
@@ -44,5 +44,6 @@ public class WalkCamino2 : MonoBehaviour {
 			delay = Time.time + 2.0f; 
 		}
 	}
+	
 	
 }

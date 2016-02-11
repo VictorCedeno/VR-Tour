@@ -31,6 +31,7 @@ using System.Collections.Generic;
 public class Cardboard : MonoBehaviour {
   /// The singleton instance of the Cardboard class.
   /// Not null: the instance is created automatically on demand if not already present.
+
   public static Cardboard SDK {
     get {
       if (sdk == null) {
@@ -45,6 +46,10 @@ public class Cardboard : MonoBehaviour {
       return sdk;
     }
   }
+	public void DevicePause(bool pause) {
+		if (device != null) device.OnPause(pause);
+	}
+
   private static Cardboard sdk = null;
 
   /// The StereoController instance attached to the main camera, or null if there is none.
