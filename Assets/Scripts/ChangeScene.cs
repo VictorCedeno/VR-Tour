@@ -22,6 +22,7 @@ public class ChangeScene : MonoBehaviour {
 		// if looking at object for 2 seconds, enable/disable autowalk
 		if (isLookedAt && Time.time>delay) { 
 			delay = Time.time + 2.0f;
+			Toolbox.Instance.scene = Constants.CLASSROOM_SCENE;
 			Application.LoadLevel(Constants.CLASSROOM_SCENE);
 		}
 		// currently looking at object

@@ -51,6 +51,7 @@ public class Init : MonoBehaviour {
 	 */
 	public void StandardMode() {
 		Toolbox.Instance.mode = Constants.STANDARD_MODE;
+		Toolbox.Instance.scene = Constants.MAIN_SCENE;
 		Application.LoadLevel (Constants.MAIN_SCENE);
 	}
 
@@ -59,6 +60,7 @@ public class Init : MonoBehaviour {
 	 */
 	public void VRMode() {
 		Toolbox.Instance.mode = Constants.VR_MODE;
+		Toolbox.Instance.scene = Constants.MAIN_SCENE;
 		Application.LoadLevel (Constants.MAIN_SCENE);
 	}
 

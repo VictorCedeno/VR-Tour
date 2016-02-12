@@ -20,6 +20,7 @@ public class GoToClassroom : MonoBehaviour {
 		bool isLookedAt = GetComponent<Collider>().Raycast(head.Gaze, out hit, Mathf.Infinity);
 		// if looking at object for 2 seconds, enable/disable autowalk
 		if (isLookedAt && Time.time>delay) { 
+			Toolbox.Instance.scene = Constants.CLASSROOM_PHOTOSPHERE_SCENE;
 			Application.LoadLevel (Constants.CLASSROOM_PHOTOSPHERE_SCENE);
 			delay = Time.time + 1.0f;
 		}

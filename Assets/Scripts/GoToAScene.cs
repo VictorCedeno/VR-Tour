@@ -7,7 +7,7 @@ public class GoToAScene : MonoBehaviour {
 	
 	private CardboardHead head;
 	private Vector3 startingPosition;
-	private float delay = 0.0f; 
+	private float delay = 0.0f;
 	
 	
 	void Start() {
@@ -19,7 +19,8 @@ public class GoToAScene : MonoBehaviour {
 		RaycastHit hit;
 		bool isLookedAt = GetComponent<Collider>().Raycast(head.Gaze, out hit, Mathf.Infinity);
 		// if looking at object for 2 seconds, enable/disable autowalk
-		if (isLookedAt && Time.time>delay) { 
+		if (isLookedAt && Time.time>delay) {
+			Toolbox.Instance.scene = Constants.AUDITORIUM_SCENE;
 			Application.LoadLevel (Constants.AUDITORIUM_SCENE);
 			delay = Time.time + 1.0f;
 		}

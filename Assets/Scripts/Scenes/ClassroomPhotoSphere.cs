@@ -14,7 +14,10 @@ public class ClassroomPhotoSphere : MonoBehaviour {
 		} else {
 			Cardboard.SDK.VRModeEnabled = false;
 		}
-		GetComponentInChildren<Cardboard> ().DevicePause (false);
+		try {
+			GetComponentInChildren<Cardboard> ().DevicePause (false);
+		} catch {
+		}
 	}
 	
 	void Update() {
